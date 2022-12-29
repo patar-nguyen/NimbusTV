@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    var tableView = UITableView()
+//    var tableView = UITableView(frame: .zero, style: .grouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,30 +17,46 @@ class HomeViewController: UIViewController {
         configureTableView()
     }
     
+    let tableView: UITableView = {
+        let table = UITableView(frame: .zero, style: .grouped)
+        table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        return table
+    }()
+    
     func configureTableView() {
         view.addSubview(tableView)
-        tableView.rowHeight = 200
-        tableView.sectionHeaderHeight = 40
-        tableView.frame = view.bounds
         tableView.delegate = self
         tableView.dataSource = self
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        10
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "NIMBUS"
+        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath)
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+
     
 }
