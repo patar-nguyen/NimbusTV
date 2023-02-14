@@ -42,7 +42,6 @@ class CollectionViewTableViewCell: UITableViewCell {
     }
 }
 
-
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
