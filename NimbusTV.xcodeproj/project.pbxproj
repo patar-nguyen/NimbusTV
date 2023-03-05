@@ -23,6 +23,8 @@
 		93C326BF2967C0B400686E27 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C326BE2967C0B400686E27 /* HeaderView.swift */; };
 		93C326C52995A68900686E27 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C326C42995A68900686E27 /* NetworkManager.swift */; };
 		93C326C72995AB7200686E27 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C326C62995AB7200686E27 /* Movie.swift */; };
+		93C326CA29ABDDDD00686E27 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C326C929ABDDDD00686E27 /* Extensions.swift */; };
+		93C326CC29ABE3E200686E27 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C326CB29ABE3E200686E27 /* Tv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		93C326BE2967C0B400686E27 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		93C326C42995A68900686E27 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		93C326C62995AB7200686E27 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		93C326C929ABDDDD00686E27 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		93C326CB29ABE3E200686E27 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		93C3267D294BF51700686E27 /* NimbusTV */ = {
 			isa = PBXGroup;
 			children = (
+				93C326C829ABDDD200686E27 /* Resources */,
 				93C326BB2952B99000686E27 /* Managers */,
 				93C326BA2952B96700686E27 /* Models */,
 				93C326B92952B95600686E27 /* Views */,
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				93C326C62995AB7200686E27 /* Movie.swift */,
+				93C326CB29ABE3E200686E27 /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +184,14 @@
 				93C326C42995A68900686E27 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		93C326C829ABDDD200686E27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93C326C929ABDDDD00686E27 /* Extensions.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +331,11 @@
 				93C326BD2952B9C300686E27 /* CollectionViewTableViewCell.swift in Sources */,
 				93C326B8294BF89700686E27 /* DownloadsViewController.swift in Sources */,
 				93C3267F294BF51700686E27 /* AppDelegate.swift in Sources */,
+				93C326CA29ABDDDD00686E27 /* Extensions.swift in Sources */,
 				93C32681294BF51700686E27 /* SceneDelegate.swift in Sources */,
 				93C326B4294BF86D00686E27 /* UpcomingViewController.swift in Sources */,
 				93C326C72995AB7200686E27 /* Movie.swift in Sources */,
+				93C326CC29ABE3E200686E27 /* Tv.swift in Sources */,
 				93C326B2294BF84B00686E27 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
