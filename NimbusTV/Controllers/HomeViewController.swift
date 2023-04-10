@@ -22,11 +22,6 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .systemBackground
         configureTableView()
         configureNavbar()
-        //getTrendingMovies()
-        //getTrendingTvs()
-        //getUpcomingMovies()
-        //getPopular()
-        getTopRated()
     } 
     
     let sectionTitles: [String] = ["Trending Movies", "Trending TV Shows", "Popular", "Upcoming Movies", "Top Rated"]
@@ -61,33 +56,6 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
-    }
-    
-//    private func getTrendingMovies() {
-//        NetworkManager.shared.getTrendingMovies { results in
-//            switch results {
-//            case .success(let movies):
-//                print(movies)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
-    
-//    private func getTrendingTvs() {
-//        NetworkManager.shared.getTrendingTvs { results in }
-//    }
-    
-//    private func getUpcomingMovies() {
-//        NetworkManager.shared.getUpcomingMovies { results in }
-//    }
-    
-//    private func getPopular() {
-//        NetworkManager.shared.getPopular { results in}
-//    }
-    
-    private func getTopRated() {
-        NetworkManager.shared.getTopRated { results in }
     }
 }
 
