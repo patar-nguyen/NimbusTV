@@ -68,3 +68,5 @@ class TitleTableViewCell: UITableViewCell {
         titleLabel.text = model.titleName
     }
 }
+
+//testing
