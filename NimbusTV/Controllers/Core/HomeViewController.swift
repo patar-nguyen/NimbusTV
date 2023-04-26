@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
         title = "Home"
         configureTableView()
         configureNavbar()
+        
     } 
     
     let sectionTitles: [String] = ["Trending Movies", "Trending TV Shows", "Popular", "Upcoming Movies", "Top Rated"]

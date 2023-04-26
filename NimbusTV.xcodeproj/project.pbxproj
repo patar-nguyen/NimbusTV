@@ -30,6 +30,7 @@
 		93C7F21C29E4A3BA0002A90D /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7F21B29E4A3BA0002A90D /* TitleTableViewCell.swift */; };
 		93C7F21E29E4A9FC0002A90D /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7F21D29E4A9FC0002A90D /* TitleViewModel.swift */; };
 		93C7F22029EDF9F20002A90D /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7F21F29EDF9F20002A90D /* SearchResultsViewController.swift */; };
+		93C7F22429F8B7110002A90D /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7F22329F8B7100002A90D /* YoutubeSearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		93C7F21B29E4A3BA0002A90D /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		93C7F21D29E4A9FC0002A90D /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		93C7F21F29EDF9F20002A90D /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		93C7F22329F8B7100002A90D /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				93C326C62995AB7200686E27 /* Title.swift */,
+				93C7F22329F8B7100002A90D /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				93C326CE29B5576F00686E27 /* TitleCollectionViewCell.swift in Sources */,
 				93C7F22029EDF9F20002A90D /* SearchResultsViewController.swift in Sources */,
 				93C326CA29ABDDDD00686E27 /* Extensions.swift in Sources */,
+				93C7F22429F8B7110002A90D /* YoutubeSearchResponse.swift in Sources */,
 				93C32681294BF51700686E27 /* SceneDelegate.swift in Sources */,
 				93C326B4294BF86D00686E27 /* UpcomingViewController.swift in Sources */,
 				93C326C72995AB7200686E27 /* Title.swift in Sources */,

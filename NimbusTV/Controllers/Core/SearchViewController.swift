@@ -16,9 +16,10 @@ class SearchViewController: UIViewController {
         configureTableView()
         configureSearchBar()
         fetchDiscoverMovies()
+        
     }
     
-    private var titles: [Title] = []
+    public var titles: [Title] = []
     
     func configureViewController() {
         view.backgroundColor = .systemBackground
@@ -36,7 +37,7 @@ class SearchViewController: UIViewController {
     func configureTableView() {
         view.addSubview(discoverTable)
         discoverTable.delegate = self
-        discoverTable.dataSource = self 
+        discoverTable.dataSource = self
     }
     
     private let searchController: UISearchController = {
@@ -50,6 +51,8 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+
     }
     
     private func fetchDiscoverMovies() {
@@ -90,5 +93,27 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        guard let query = searchBar.text, !query.trimmingCharacters(in: .whitespaces).isEmpty,
+                query.trimmingCharacters(in: .whitespaces).count >= 3,
+                let resultsController = searchController.searchResultsController as? SearchResultsViewController else { return }
+        
+        NetworkManager.shared.search(with: query) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let titles):
+                    resultsController.titles = titles
+                    resultsController.searchResultsCollectionView.reloadData()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
 }
