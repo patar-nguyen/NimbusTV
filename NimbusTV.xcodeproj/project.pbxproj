@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93B5EEB72A033196002F2E25 /* NimbusTVModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93B5EEB52A033196002F2E25 /* NimbusTVModel.xcdatamodeld */; };
 		93C3267F294BF51700686E27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C3267E294BF51700686E27 /* AppDelegate.swift */; };
 		93C32681294BF51700686E27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C32680294BF51700686E27 /* SceneDelegate.swift */; };
 		93C32688294BF51900686E27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C32687294BF51900686E27 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93B5EEB62A033196002F2E25 /* NimbusTVModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NimbusTVModel.xcdatamodel; sourceTree = "<group>"; };
 		93C3267B294BF51700686E27 /* NimbusTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbusTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C3267E294BF51700686E27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C32680294BF51700686E27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				93C32687294BF51900686E27 /* Assets.xcassets */,
 				93C32689294BF51900686E27 /* LaunchScreen.storyboard */,
 				93C3268C294BF51900686E27 /* Info.plist */,
+				93B5EEB52A033196002F2E25 /* NimbusTVModel.xcdatamodeld */,
 			);
 			path = NimbusTV;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				93C7F21C29E4A3BA0002A90D /* TitleTableViewCell.swift in Sources */,
 				93C326B6294BF88300686E27 /* SearchViewController.swift in Sources */,
 				93C326BF2967C0B400686E27 /* HeaderView.swift in Sources */,
+				93B5EEB72A033196002F2E25 /* NimbusTVModel.xcdatamodeld in Sources */,
 				93C326C52995A68900686E27 /* NetworkManager.swift in Sources */,
 				93C326AF294BF61100686E27 /* MainTabBarViewController.swift in Sources */,
 				93C326BD2952B9C300686E27 /* CollectionViewTableViewCell.swift in Sources */,
@@ -737,6 +741,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		93B5EEB52A033196002F2E25 /* NimbusTVModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93B5EEB62A033196002F2E25 /* NimbusTVModel.xcdatamodel */,
+			);
+			currentVersion = 93B5EEB62A033196002F2E25 /* NimbusTVModel.xcdatamodel */;
+			path = NimbusTVModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 93C32673294BF51700686E27 /* Project object */;
 }

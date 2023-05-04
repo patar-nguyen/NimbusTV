@@ -23,8 +23,11 @@ class HomeViewController: UIViewController {
         title = "Home"
         configureTableView()
         configureNavbar()
-        
+        configureHeaderView()
     }
+    
+    private var randomTrendingMovie: Title?
+    private var headerView: HeaderView?
     
     let sectionTitles: [String] = ["Trending Movies", "Trending TV Shows", "Popular", "Upcoming Movies", "Top Rated"]
     
@@ -38,8 +41,21 @@ class HomeViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
-        let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         tableView.tableHeaderView = headerView
+    }
+    
+    private func configureHeaderView() {
+        NetworkManager.shared.getTrendingTvs { [weak self] result in
+            switch result {
+            case .success(let titles):
+                let selectedTitle = titles.randomElement()
+                self?.randomTrendingMovie = selectedTitle
+                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func configureNavbar() {
